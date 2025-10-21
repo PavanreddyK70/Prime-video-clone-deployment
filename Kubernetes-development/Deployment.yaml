@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: amazon-prime
+  name: amazon-prime-clone
   namespace: default
   labels:
     app: prime-app
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: prime-container
-        image: kanha05/amazon-prime:replaceImageTag
+        image: dockerpavank/prime-clone:latest
         ports:
         - containerPort: 3000
       
